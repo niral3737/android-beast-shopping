@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_list"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        card_view:cardCornerRadius="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rl_list"
+            android:clickable="true"
+            android:background="?attr/selectableItemBackground"
+            android:padding="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="List Name 1"
+                android:layout_alignParentTop="true"
+                android:id="@+id/tv_list_name"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Created By"
+                android:fontFamily="sans-serif-light"
+                android:id="@+id/tv_created_by"
+                android:textSize="10sp"
+                android:layout_below="@id/tv_list_name"
+                android:layout_marginTop="9dp"/>
+
+            <TextView
+                android:text="Date Created"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:fontFamily="sans-serif-smallcaps"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="12sp"
+                android:id="@+id/tv_list_created_date" />
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
