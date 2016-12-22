@@ -21,6 +21,7 @@ public class BeastShoppingApplication extends Application {
         super.onCreate();
         Module.register(this);
         JodaTimeAndroid.init(this);
+        FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/Avenir.ttc");
     }
 
     public Bus getBus() {

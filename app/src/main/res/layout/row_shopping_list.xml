@@ -10,8 +10,10 @@
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        card_view:cardCornerRadius="1dp">
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        card_view:cardCornerRadius="4dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -19,38 +21,75 @@
             android:id="@+id/rl_list"
             android:clickable="true"
             android:background="?attr/selectableItemBackground"
-            android:padding="20dp"
+            android:padding="25dp"
             >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="List Name 1"
-                android:layout_alignParentTop="true"
+                android:text="Food for home"
+                android:textColor="#4a4a4a"
+                android:textSize="18sp"
                 android:id="@+id/tv_list_name"
-                android:fontFamily="sans-serif-smallcaps"
-                android:textSize="15sp"/>
+                />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Created By"
-                android:fontFamily="sans-serif-light"
-                android:id="@+id/tv_created_by"
-                android:textSize="10sp"
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
                 android:layout_below="@id/tv_list_name"
-                android:layout_marginTop="9dp"/>
-
+                android:background="#EEEEEE"
+                android:id="@+id/divider"
+                android:layout_marginTop="6dp"/>
             <TextView
-                android:text="Date Created"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:fontFamily="sans-serif-smallcaps"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
+                android:layout_below="@id/divider"
+                android:layout_marginTop="3dp"
                 android:textSize="12sp"
-                android:id="@+id/tv_list_created_date" />
+                android:id="@+id/tv_list_created_date"
+                android:text="Wednesday, 20 Dec"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_created_by"
+                android:layout_toRightOf="@id/tv_list_created_date"
+                android:text="You created it."
+                android:textAlignment="textEnd"
+                android:gravity="end"
+                android:layout_below="@id/divider"
+                android:layout_marginTop="3dp"
+                android:textSize="12sp"/>
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="List Name 1"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:id="@+id/tv_list_name"-->
+                <!--android:fontFamily="sans-serif-smallcaps"-->
+                <!--android:textSize="15sp"/>-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Created By"-->
+                <!--android:fontFamily="sans-serif-light"-->
+                <!--android:id="@+id/tv_created_by"-->
+                <!--android:textSize="10sp"-->
+                <!--android:layout_below="@id/tv_list_name"-->
+                <!--android:layout_marginTop="9dp"/>-->
+
+            <!--<TextView-->
+                <!--android:text="Date Created"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:fontFamily="sans-serif-smallcaps"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:textSize="12sp"-->
+                <!--android:id="@+id/tv_list_created_date" />-->
 
 
         </RelativeLayout>

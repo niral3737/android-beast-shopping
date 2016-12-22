@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
-        android:background="#eee">
+        android:background="@color/BackgroundColor">
 
     </android.support.v7.widget.RecyclerView>
 
@@ -25,7 +25,8 @@
         android:src="@mipmap/ic_plus"
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
-        app:rippleColor="@color/colorPrimary"
+        app:rippleColor="@color/colorPrimaryDark"
+        app:backgroundTint="#eba653"
         android:clickable="true"
         android:elevation="8dp"
         app:fabSize="normal"

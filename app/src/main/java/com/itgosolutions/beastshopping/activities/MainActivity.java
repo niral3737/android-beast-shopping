@@ -41,7 +41,6 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
     private FirebaseRecyclerAdapter firebaseRecyclerAdapter;
     private SharedPreferences sharedPreferences;
 
-    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,11 +78,6 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
         });
         recyclerShoppingList.setHasFixedSize(true);
 
-        progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Loading");
-        progressDialog.setMessage("Please wait. Loading lists");
-        progressDialog.setCancelable(false);
-
 
         populateShoppingList();
     }
@@ -94,7 +88,6 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
     }
 
     private void populateShoppingList() {
-        progressDialog.show();
 
         DatabaseReference shoppingListReference = databaseReference.child("users-shopping-lists").child(userEmail);
 
@@ -137,21 +130,6 @@ public class MainActivity extends BaseActivity implements Toolbar.OnMenuItemClic
                 });
             }
         };
-
-        firebaseRecyclerAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
-            @Override
-            public void onChanged() {
-                super.onChanged();
-            }
-
-            @Override
-            public void onItemRangeInserted(int positionStart, int itemCount) {
-                super.onItemRangeInserted(positionStart, itemCount);
-
-                if(progressDialog.isShowing())
-                    progressDialog.dismiss();
-            }
-        });
 
         recyclerShoppingList.setAdapter(firebaseRecyclerAdapter);
         recyclerShoppingList.invalidate();
